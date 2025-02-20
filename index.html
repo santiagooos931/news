@@ -92,10 +92,13 @@
         <div class="content">
             <h2>Waloryzacja 2025. Kto straci prawo do 13. i 14. emerytury?</h2>
             <div class="meta">
-                <span id="today"></span>
+                <span id="today">📅</span>
 
 <script>
-    document.getElementById("today").textContent = new Date().toLocaleDateString(undefined, { day: 'numeric' });
+    let today = new Date();
+    let day = today.toLocaleDateString(undefined, { day: 'numeric' });
+    let month = today.toLocaleDateString(undefined, { month: 'long' }); 
+    document.getElementById("today").textContent = `📅 ${day} ${month}`;
 </script>
                 <span class="stats">🔥 75262</span>
                 <span>💬 77</span>
